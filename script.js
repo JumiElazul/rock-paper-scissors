@@ -8,44 +8,39 @@ function compareResults (user, computer) {
 		alert(`You threw ${user} and the computer threw ${computer}.  Tie!`)
 		showScore()
 
-	} else if (user === 'rock' && computer === 'scissors') {
+	} else if (user === 'rock') {
+		if (computer === 'scissors') {
+			alert(`You threw ${user} and the computer threw ${computer}.  You win!`)
+			playerScore ++
+			showScore()
+		} else {
+			alert(`You threw ${user} and the computer threw ${computer}.  You lost!`)
+			computerScore ++
+			showScore()
+		}
+	
+	} else if (user === 'paper') {
+		if (computer === 'rock') {
+			alert(`You threw ${user} and the computer threw ${computer}.  You win!`)
+			playerScore ++
+			showScore()
+		} else {
+			alert(`You threw ${user} and the computer threw ${computer}.  You lost!`)
+			computerScore ++
+			showScore()
+		}
 
-		alert(`You threw ${user} and the computer threw ${computer}.  You win!`)
-		playerScore += 1
-		showScore()
-
-	} else if (user === 'rock' && computer === 'paper') {
-		
-		alert(`You threw ${user} and the computer threw ${computer}.  You lost!`)
-		computerScore += 1
-		showScore()
-
-	} else if (user === 'paper' && computer === 'rock') {
-
-		alert(`You threw ${user} and the computer threw ${computer}.  You win!`)
-		playerScore += 1
-		showScore()
-
-	} else if (user === 'paper' && computer === 'scissors') {
-
-		alert(`You threw ${user} and the computer threw ${computer}.  You lost!`)
-		computerScore += 1
-		showScore()
-
-	} else if (user === 'scissors' && computer === 'paper') {
-
-		alert(`You threw ${user} and the computer threw ${computer}.  You win!`)
-		playerScore += 1
-		showScore()
-
-	} else if (user === 'scissors' && computer === 'rock') {
-
-		alert(`You threw ${user} and the computer threw ${computer}.  You lost!`)
-		computerScore += 1
-		showScore()
-
+	} else if (user === 'scissors') {
+		if (computer === 'paper') {
+			alert(`You threw ${user} and the computer threw ${computer}.  You win!`)
+			playerScore ++
+			showScore()
+		} else {
+			alert(`You threw ${user} and the computer threw ${computer}.  You lost!`)
+			computerScore ++
+			showScore()
+		}
 	}
-
 }
 
 // Set the scores for player and computer to 0
