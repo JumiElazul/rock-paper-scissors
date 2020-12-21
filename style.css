@@ -1,0 +1,90 @@
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  background: black;
+  font-family: sans-serif;
+  color: white;
+  font-size: 30px;
+}
+
+header {
+	border: 5px solid gray;
+	font-size: 60px;
+	font-weight: 800;
+	height: 15vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: auto;
+}
+
+.main-content {
+	border: 5px solid yellow;
+	height: 65vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.scoreboard {
+	border: 5px solid white;
+	height: auto;
+	width: auto;
+	display: flex;
+}
+
+.player-score {
+	border: 5px solid green;
+	width: 50%;
+	text-align: center;
+}
+
+.computer-score {
+	border: 5px solid orange;
+	width: 50%;
+	text-align: center;
+}
+
+.images {
+	border: 5px solid blue;
+	height: 50%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.player-selection {
+	border: 5px solid purple;
+	margin-top: 50px;
+	display: flex;
+	width: 60%;
+	align-self: center;
+	justify-content: space-around;
+}
+
+button {
+	font-size: 20px;
+	width: 150px;
+	height: 50px;
+	background-color: rgb(0, 0, 255);
+	cursor: pointer;
+}
+
+footer {
+	display: flex;
+	border: 5px solid red;
+	height: 10vh;
+	margin-top: 20px;
+	justify-content: center;
+	align-items: center;
+}
+
+footer p {
+	font-size: 20px;
+}
+
+img {
+	background-color: black;	
+}
