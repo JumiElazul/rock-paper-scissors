@@ -15,27 +15,27 @@
 
 		<div class="player-score">
 			<span>Player Score</span>
-			<p>0</p>
+			<p id="player-score-num">0</p>
 		</div>
 		
 		<div class="computer-score">
 			<span>Computer Score</span>
-			<p>0</p>
+			<p id="computer-score-num">0</p>
 		</div>
 	
 	</div>
 
-	<div class="images">
-		<div><img id="rock-image" src="assets/rock.png"></div>
-		<div><img id="paper-image" src="assets/paper.png"></div>
-		<div><img id="scissors-image" src="assets/scissors.png"></div>
+	<div class="image-play-area">
+		<div id="player-choice"><img id="player-image" src="assets/rock.png" /></div>
+		<div id="play-area"><p id="play-text">Select your Choice</p></div>
+		<div id="computer-choice"><img id="computer-image" src="assets/rock.png"></div>
 	</div>
 	
-	<div class="player-selection">
+	<div class="options">
 		
-		<button>Rock</button>
-		<button>Paper</button>
-		<button>Scissors</button>
+		<button id="rock-select">Rock</button>
+		<button id="paper-select">Paper</button>
+		<button id="scissors-select">Scissors</button>
 
 	</div>
 
@@ -43,6 +43,6 @@
 </body>
 <footer>
 	<p>Made by Greg Coomber</p>
-	<!-- <script src="script.js"></script> -->
+	<script src="script.js"></script>
 </footer>
 </html>

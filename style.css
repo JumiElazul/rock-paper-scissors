@@ -6,75 +6,94 @@ body {
   min-height: 100%;
   background: black;
   font-family: sans-serif;
-  color: white;
+  color: rgb(240, 240, 240);
   font-size: 30px;
 }
 
 header {
-	border: 5px solid gray;
 	font-size: 60px;
 	font-weight: 800;
-	height: 15vh;
+	height: 10vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	width: auto;
+	background-image: linear-gradient(rgba(35, 73, 189, 1), rgba(35, 73, 189, .5));
+	color: black;
+	border-bottom: 8px solid white;
 }
 
 .main-content {
-	border: 5px solid yellow;
 	height: 65vh;
 	display: flex;
 	flex-direction: column;
+	margin-top: 50px;
 }
 
 .scoreboard {
-	border: 5px solid white;
 	height: auto;
 	width: auto;
 	display: flex;
 }
 
 .player-score {
-	border: 5px solid green;
 	width: 50%;
 	text-align: center;
 }
 
 .computer-score {
-	border: 5px solid orange;
 	width: 50%;
 	text-align: center;
 }
 
-.images {
-	border: 5px solid blue;
+.image-play-area {
 	height: 50%;
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
 }
 
-.player-selection {
-	border: 5px solid purple;
+.options {
 	margin-top: 50px;
 	display: flex;
-	width: 60%;
+	width: 44%;
 	align-self: center;
-	justify-content: space-around;
+	justify-content: space-between;
+}
+
+#player-image {
+	transform: rotateY(180deg);
+	position: relative;
+	margin-right: 40vw;
+}
+
+#computer-image {
+	position: relative;
+	margin-left: 40vw;
+}
+
+#player-choice {
+	position: absolute;
+}
+
+#play-area {
+	position: absolute;
+}
+
+#computer-choice {
+	position:  absolute;
 }
 
 button {
 	font-size: 20px;
 	width: 150px;
 	height: 50px;
-	background-color: rgb(0, 0, 255);
+	background-color: rgb(35, 73, 189);
 	cursor: pointer;
 }
 
 footer {
 	display: flex;
-	border: 5px solid red;
 	height: 10vh;
 	margin-top: 20px;
 	justify-content: center;
