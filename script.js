@@ -9,12 +9,58 @@ function updateScore () {
 	cScoreDisplay.textContent = computerScore
 }
 
+function gameOver () {
+	const rockbutton = document.querySelector("#rock-select")
+	const paperbutton = document.querySelector("#paper-select")
+	const scissorsbutton = document.querySelector("#scissors-select")
+
+	// rockbutton.classList.add("button-invis")
+	// paperbutton.classList.add("button-invis")
+	// scissorsbutton.classList.add("button-invis")
+
+	rockbutton.remove()
+	paperbutton.remove()
+	scissorsbutton.remove()
+
+
+	const playAgain = document.createElement('button')
+	playAgain.textContent = `Play Again!`
+	document.querySelector("#paper-select-div").appendChild(playAgain)
+
+	playAgain.addEventListener('click', function () {
+		document.querySelector('#rock-select-div').appendChild(rockbutton)
+		document.querySelector('#paper-select-div').removeChild(playAgain)
+		document.querySelector('#paper-select-div').appendChild(paperbutton)
+		document.querySelector('#scissors-select-div').appendChild(scissorsbutton)
+		playerScore = 0
+		computerScore = 0
+		updateScore()
+		document.querySelector('#play-text').textContent = `Select Your Choice`
+
+		})
+	}
+
+function checkWin () {
+	if (playerScore >= 5 || computerScore >= 5) {
+		const playText = document.querySelector("#play-text")
+		if (playerScore > computerScore) {
+			playText.textContent = `Player Wins!  Final Score is ${playerScore} to ${computerScore}`
+			gameOver()
+
+		} else {
+			playText.textContent = `Computer Wins!  Final Score is ${playerScore} to ${computerScore}`
+			gameOver()
+		}
+	}
+
+}
+
 function playGame (player, computer) {
 	const playText = document.querySelector("#play-text")
 
 	if (player === computer) {
 		playText.textContent = `You both picked ${player}.  Tie!`
-	
+
 	} else if (playerChoice === 'rock') {
 		if (computerChoice === 'scissors') {
 			playerScore ++
@@ -47,6 +93,8 @@ function playGame (player, computer) {
 			playText.textContent = `Scissors vs Rock.  Computer wins a point.`
 		}
 	}
+
+	checkWin()
 }
 
 
